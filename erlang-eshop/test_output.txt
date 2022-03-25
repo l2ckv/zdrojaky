@@ -1,0 +1,27 @@
+
+3> e_shop:start_link().
+{ok,<0.40.0>}
+
+4> e_shop:test1_user_operations().
+registered user user1
+session of user user1 exiting (log out)
+registered user user2
+session of user user2 timed out
+ok
+
+5> e_shop:test2_item_operations().
+ID: 2, Added by: user1, Name: title2, Description: text2, Price: 10.00
+ID: 1, Added by: user1, Name: title1, Description: text1, Price: 5.00
+session of user user1 exiting (log out)
+ok
+
+6> e_shop:test3_order_operations().
+ID: 1, Total: 65.0
+changing state of order 1 to packaged
+state change ok
+changing state of order 1 to shipped
+state change ok
+changing state of order 1 to delivered
+state change ok
+session of user user2 exiting (log out)
+ok
